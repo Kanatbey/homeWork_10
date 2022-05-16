@@ -1,10 +1,8 @@
 package peaksoft;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
-public class Dog implements Animal{
+public class Dog implements Animal {
     @Value("${dog.name}")
     private String name;
     @Value("${dog.age}")
@@ -13,9 +11,11 @@ public class Dog implements Animal{
     private String breed;
     @Value("${dog.color}")
     private String color;
-public Dog(){
-    System.out.println("Dog is bean created!");
-}
+
+    public Dog() {
+        System.out.println("Dog is bean created!");
+    }
+
     public String getName() {
         return name;
     }

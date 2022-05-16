@@ -4,14 +4,14 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("classpath:app.properties")
-@ComponentScan("peaksoft")
+
 public class MyConfig {
     @Bean
-    public Animal dog(){
+    public Dog dog(){
         return new Dog();
     }
     @Bean
     public Person myPerson(){
-        return new  Person((Dog) dog());
+        return new  Person(dog());
     }
 }
